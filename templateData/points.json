@@ -1,0 +1,32 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+    {
+        "type": "Feature",
+        "geometry": {
+        "type": "Point",
+        "coordinates": [7.62584, 51.9631]
+        },
+        "properties": {
+            "name": "Münster Cathedral",
+            "image": "image-link",
+            "shortDesc": "short description",
+            "longDesc": "text-link"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+        "type": "Point",
+        "coordinates": [7.62819, 51.9616]
+        },
+        "properties": {
+            "name": "Historical Town Hall",
+            "image": "image-link",
+            "shortDesc": "short description",
+            "longDesc": "text-link"
+        }
+    }
+    ]
+}
+  
