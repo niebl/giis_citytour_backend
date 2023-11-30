@@ -13,8 +13,8 @@ def index():
 def get_poi():
     f = open("/templateData/points.json")
     data = json.load(f)
-    jsonify(data)
-    return "GET JSON"
+    json_content = jsonify(data)
+    return json_content
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)
