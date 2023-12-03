@@ -9,12 +9,12 @@ app = Flask(__name__)
 def index():
     return "TODO: list of accessible routes"
     
-@app.get("/")
+@app.get("/template-data")
 def get_poi():
-    f = open("/templateData/points.json")
+    f = open("./templateData/points.json")
     data = json.load(f)
     json_content = jsonify(data)
     return json_content
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=3001, debug=True)
