@@ -1,7 +1,11 @@
-#!/bin/python
+#!/usr/bin/env python
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Response
+from markupsafe import escape
 import json
+import os
+
+from lorem import get_paragraph
 
 app = Flask(__name__)
 
@@ -15,6 +19,29 @@ def get_poi():
     data = json.load(f)
     json_content = jsonify(data)
     return json_content
+
+@app.get('/story', defaults={'story_id': False})
+@app.get('/story/<story_id>')
+def get_story(story_id):
+    return f'story selected {story_id}'
+
+@app.get("/desc", defaults={'desc_id': False})
+@app.get("/desc/<desc_id>")
+def get_desc(desc_id):
+    if not desc_id:
+        return('TODO: return list of all descriptions')
+    if desc_id == 'template': #remove later
+        return( get_paragraph(count=5, comma=(0, 2), word_range=(4, 8), sentence_range=(5, 10), sep=os.linesep) )
+
+@app.get("/media", defaults={'media_id': False})
+@app.get("/media/<media_id>")
+def get_media(media_id):
+    if not media_id:
+        return Response(
+            "resource not found", 
+            status=404
+        )  
+    return f'TODO: return images'
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=3001, debug=True)

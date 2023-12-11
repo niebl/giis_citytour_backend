@@ -1,1 +1,6 @@
 Flask
+
+
+
+#only required at early stage of dev
+python-lorem
