@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from flask import Flask, request, jsonify, Response, send_from_directory
+from flask_cors import CORS
 from markupsafe import escape
 import json
 import os
