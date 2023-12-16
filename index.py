@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from flask import Flask, request, jsonify, Response
+from flask import Flask, request, jsonify, Response, send_from_directory
 from markupsafe import escape
 import json
 import os
@@ -33,6 +33,9 @@ def get_desc(desc_id):
     if desc_id == 'template': #remove later
         return( get_paragraph(count=5, comma=(0, 2), word_range=(4, 8), sentence_range=(5, 10), sep=os.linesep) )
 
+# media resource
+# serves static files
+# media_id is the filename of the file to be served
 @app.get("/media", defaults={'media_id': False})
 @app.get("/media/<media_id>")
 def get_media(media_id):
@@ -40,8 +43,8 @@ def get_media(media_id):
         return Response(
             "resource not found", 
             status=404
-        )  
-    return f'TODO: return images'
+        )    
+    return send_from_directory("./media", media_id)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=3001, debug=True)
