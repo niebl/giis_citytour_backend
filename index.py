@@ -12,7 +12,13 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "TODO: list of accessible routes"
+    return (
+'''
+/template-data: &nbsp               placeholder, serves GeoJSON formatted example story <br/>
+/story/&lt;story_id&gt;: &nbsp      serves the GeoJSON formatted tour-route data of the given story-id <br/>
+/media/&lt;filename&gt;: &nbsp      serves a file that corresponds to the filname, if a corresponding file exists in the media directory
+'''
+    )
     
 @app.get("/template-data")
 def get_poi():
