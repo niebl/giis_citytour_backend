@@ -1,32 +1,187 @@
 {
     "type": "FeatureCollection",
     "features": [
-    {
+        {
         "type": "Feature",
         "geometry": {
-        "type": "Point",
-        "coordinates": [7.62584, 51.9631]
+            "type": "Point",
+            "coordinates": [51.96116, 7.63220]
         },
         "properties": {
+            "tour_id": 0,
+            "poi_id": 0,
+            "name": "Townhall Tower",
+            "story_desc": "It is early in the morning in June 1528. You are a servant of the bishop and have been sent on some deliveries...",
+            "task": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "short_desc": "The Townhall Tower is the only part of the old townhall that is still standing. It is well known for the carol of the bells each day.",
+            "long_desc": "Like many places from the old city, the old townhall was destroyed. Partly due to political decisions, partly through wars. As such the old Townhall tower is only remaining part - and even it is just a reconstruction build in the early 20th century. The rest of the old townhall had been destroyed during the second world war.",
+            "img": "",
+            "site_index": 1 
+        }
+        },
+        {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [51.96164, 7.62785]
+        },
+        "properties": {
+            "tour_id": 0,
+            "poi_id": 1,
+            "name": "Historical Townhall",
+            "story_desc": "You have to visit the townhall, as you have a letter from the bishop to the major...",
+            "task": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "short_desc": "The Townhall we have today is a reconstruction. The original townhall has been build in the 11th century and played a big role in Westfalian history.",
+            "long_desc": "The townhall as we see it today is a very recent reconstruction, though there had been a townhall in about the same place for almost 1000 years, though the original townhall was a completely wooden construction. The Münster townhall's biggest claim to fame has to be its role in the founding of the 'Westfalian Peace Agreement' during the 17th century, when the congress on the peace happened here.",
+            "img": "",
+            "site_index": 2
+        }
+        },
+        {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [51.96177, 7.62848]
+        },
+        "properties": {
+            "tour_id": 0,
+            "poi_id": 2,
+            "name": "Stadtweinhaus (Townwinery)",
+            "story_desc": "His lordship asked you to bring back two bottles of wine...",
+            "task": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "short_desc": "The town winery came to be to serve for long conferences happening in the townhall. The current version has been constructed in the 17th century, though.",
+            "long_desc": "Like the townhall itself, the building of the town winery is not the original one. It, too, has been reconstructed during the 18th century. However, it is said that there was a townwinery next to the townhall since at least thr 14th century.",
+            "img": "",
+            "site_index": 3
+        }
+        },
+        {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [51.96538,7.63013]
+        },
+        "properties": {
+            "tour_id": 0,
+            "poi_id": 3,
+            "name": "St. Martini Church",
+            "story_desc": "You know you should make your way to the market, but on your way you meet your friend Magret...",
+            "task": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "short_desc": "The St. Martini church has been one of the oldest churches in Münster. Today it is well known for the youthwork done.",
+            "long_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus porttitor augue nec sodales. Fusce volutpat enim mauris. Fusce consequat condimentum lectus, egestas congue ante rhoncus id. Aliquam erat volutpat. Proin ultricies vulputate metus, vel volutpat lorem sodales sed. Praesent convallis eget nisl et sollicitudin. Quisque sapien dolor, laoreet vel.",
+            "img": "",
+            "site_index": 4
+        }
+        },
+        {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [51.96286, 7.62888]
+        },
+        "properties": {
+            "tour_id": 0,
+            "poi_id": 4,
+            "name": "St. Lamberti Church",
+            "story_desc": "There are still rotting skeletons in the cages hanging on the Lamberti Church, as you pass by...",
+            "task": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "short_desc": "The St. Lamberti church has been constructed between the 14th and 16th century. It played a big role in the war against the Anabaptist.",
+            "long_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus porttitor augue nec sodales. Fusce volutpat enim mauris. Fusce consequat condimentum lectus, egestas congue ante rhoncus id. Aliquam erat volutpat. Proin ultricies vulputate metus, vel volutpat lorem sodales sed. Praesent convallis eget nisl et sollicitudin. Quisque sapien dolor, laoreet vel.",
+            "img": "",
+            "site_index": 5
+        }
+        },
+        {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [51.96551, 7.62232]
+        },
+        "properties": {
+            "tour_id": 0,
+            "poi_id": 5,
+            "name": "Schafgasse (Sheep Alley)",
+            "story_desc": "As you and Magret walk the city streets, you find a lost sheep...",
+            "task": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "short_desc": "The Sheep Alley was used by the shepards during the middle ages to guide the sheep out of the city in the morning.",
+            "long_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus porttitor augue nec sodales. Fusce volutpat enim mauris. Fusce consequat condimentum lectus, egestas congue ante rhoncus id. Aliquam erat volutpat. Proin ultricies vulputate metus, vel volutpat lorem sodales sed. Praesent convallis eget nisl et sollicitudin. Quisque sapien dolor, laoreet vel.",
+            "img": "",
+            "site_index": 6
+        }
+        },
+        {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [51.96628,7.62308]
+        },
+        "properties": {
+            "tour_id": 0,
+            "poi_id": 6,
+            "name": "Budden Tower",
+            "story_desc": "As you pass the Budden Tower you realize how late it is, as the shadows are growing short...",
+            "task": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "short_desc": "The Budden Tower was one of the guard towers of the city, part of the city wall.",
+            "long_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus porttitor augue nec sodales. Fusce volutpat enim mauris. Fusce consequat condimentum lectus, egestas congue ante rhoncus id. Aliquam erat volutpat. Proin ultricies vulputate metus, vel volutpat lorem sodales sed. Praesent convallis eget nisl et sollicitudin. Quisque sapien dolor, laoreet vel.",
+            "img": "",
+            "site_index": 7
+        }
+        },
+        {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [51.96272, 7.62541]
+        },
+        "properties": {
+            "tour_id": 0,
+            "poi_id": 7,
             "name": "Münster Cathedral",
-            "image": "image-link",
-            "shortDesc": "The current Cathedral of the city of Münster was build between the years 1225 and 1264, after the two prior Cathedrals of the city had fallen into disrepair. Most notably the second Cathedral was demolished to build Paulus-Dom we know today. It is known for its mostly Gothic and Romanesque architecture and the fine sandstone work. As a Cathedral it also is the heart of the diocese of Münster, which encompasses a good chunck of the most northern part of NRW.",
-            "longDesc": "text-link"
+            "story_desc": "You finally make it to the Cathedral, in front of which the market is happening...",
+            "task": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "short_desc": "The current Münster Cathedral has been the third cathedral constructed in Münster. It was build in the 13th century.",
+            "long_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus porttitor augue nec sodales. Fusce volutpat enim mauris. Fusce consequat condimentum lectus, egestas congue ante rhoncus id. Aliquam erat volutpat. Proin ultricies vulputate metus, vel volutpat lorem sodales sed. Praesent convallis eget nisl et sollicitudin. Quisque sapien dolor, laoreet vel.",
+            "img": "",
+            "site_index": 8
         }
-    },
-    {
+        },
+        {
         "type": "Feature",
         "geometry": {
-        "type": "Point",
-        "coordinates": [7.62819, 51.9616]
+            "type": "Point",
+            "coordinates": [51.96410, 7.62238]
         },
         "properties": {
-            "name": "Historical Town Hall",
-            "image": "image-link",
-            "shortDesc": "It is not quite known when exactly the Historical City Hall of the city of Münster was constructed, but it is known that it happened between 1170 and 1200. Though the original building was a timber building which got added on over the time. While this old City Hall is mostly used for ceremonial purposes today, it played a big role not only in the history of Münster, but also the history of Westfalia, as it was the location on which the Peace of Westphalia was negotiated in 1648.",
-            "longDesc": "text-link"
+            "tour_id": 0,
+            "poi_id": 8,
+            "name": "Überwasserkirche",
+            "story_desc": "The bishop also asked you to deliver a letter to the abtess at the abby. You had almost forgotten...",
+            "task": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "short_desc": "The Überwasserkirche (Over-the-Water-Church) once belonged to a nunnery. It has been constructed in the late middle ages.",
+            "long_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus porttitor augue nec sodales. Fusce volutpat enim mauris. Fusce consequat condimentum lectus, egestas congue ante rhoncus id. Aliquam erat volutpat. Proin ultricies vulputate metus, vel volutpat lorem sodales sed. Praesent convallis eget nisl et sollicitudin. Quisque sapien dolor, laoreet vel.",
+            "img": "",
+            "site_index": 9
         }
-    }
+        },
+        {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [51.96356, 7.61333]
+        },
+        "properties": {
+            "tour_id": 0,
+            "poi_id": 9,  
+            "name": "Münster Castle",
+            "story_desc": "You return to the castle after a long day in the town, but your day is not over, as you will help prepare supper...",
+            "task": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "short_desc": "The Castle of Münster was a castle constructed for the bishop. During the middle ages, the bishop lived in a smaller residence clother to the Cathedral.",
+            "long_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus porttitor augue nec sodales. Fusce volutpat enim mauris. Fusce consequat condimentum lectus, egestas congue ante rhoncus id. Aliquam erat volutpat. Proin ultricies vulputate metus, vel volutpat lorem sodales sed. Praesent convallis eget nisl et sollicitudin. Quisque sapien dolor, laoreet vel.",
+            "img": "",
+            "site_index": 10
+            }
+        }
+
     ]
 }
   
