@@ -1,12 +1,33 @@
 #!/usr/bin/env python
 
-from flask import Flask, request, jsonify, Response, send_from_directory
-from flask_cors import CORS
-from markupsafe import escape
 import json
 import os
+from dotenv import load_dotenv
+from flask import Flask, request, jsonify, Response, send_from_directory
+from flask_cors import CORS
+#from markupsafe import escape
+from sqlalchemy import create_engine, text
+from sqlalchemy.engine import URL
 
 from lorem import get_paragraph
+
+load_dotenv()
+
+url = URL.create(
+    drivername="postgresql",
+    username=os.getenv("DB_USER"),
+    host=os.getenv("DB_URL"),
+    database="giis",
+    password=os.getenv("DB_PASSWORD")
+)
+db_engine = create_engine(url)
+
+with db_engine.connect() as connection:
+    sites = connection.execute(text("SELECT * FROM sites"))
+    for row in sites:
+        print(row.site_name)
+
+
 
 app = Flask(__name__)
 
