@@ -10,9 +10,10 @@ services:
     networks:
       - postgres-network
     volumes:
-      - ./db-data/:/var/lib/postgresql/data/
+#      - ./db-data/:/var/lib/postgresql/data/
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-  
+      - ./default_data:/srv
+
   pgadmin:
     image: dpage/pgadmin4
     ports:
@@ -24,7 +25,7 @@ services:
     networks:
       - postgres-network
     volumes:
-      - ./pgadmin-data/:/var/lib/pgadmin/ #https://stackoverflow.com/questions/64781245/permission-denied-var-lib-pgadmin-sessions-in-docker
+#      - ./pgadmin-data/:/var/lib/pgadmin/ #https://stackoverflow.com/questions/64781245/permission-denied-var-lib-pgadmin-sessions-in-docker
 
 networks: 
   postgres-network:
