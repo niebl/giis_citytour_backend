@@ -1,5 +1,8 @@
 Flask
 flask-cors
+flask_sqlalchemy 
+psycopg2-binary
+python-dotenv
 
 #only required at early stage of dev
 python-lorem
