@@ -11,6 +11,8 @@ from sqlalchemy.engine import URL
 
 from lorem import get_paragraph
 
+from classes import Story, Site 
+
 load_dotenv()
 
 url = URL.create(
@@ -21,13 +23,6 @@ url = URL.create(
     password=os.getenv("DB_PASSWORD")
 )
 db_engine = create_engine(url)
-
-with db_engine.connect() as connection:
-    sites = connection.execute(text("SELECT * FROM sites"))
-    for row in sites:
-        print(row.site_name)
-
-
 
 app = Flask(__name__)
 
@@ -51,7 +46,8 @@ def get_poi():
 @app.get('/story', defaults={'story_id': False})
 @app.get('/story/<story_id>')
 def get_story(story_id):
-    return f'story selected {story_id}'
+    story = Story(story_id)
+    return str(story)
 
 @app.get("/desc", defaults={'desc_id': False})
 @app.get("/desc/<desc_id>")
