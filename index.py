@@ -4,7 +4,7 @@ import json
 import os
 from dotenv import load_dotenv
 from flask import Flask, request, jsonify, Response, send_from_directory
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 #from markupsafe import escape
 from sqlalchemy import create_engine, text
 from sqlalchemy.engine import URL
@@ -25,6 +25,8 @@ url = URL.create(
 db_engine = create_engine(url)
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route("/")
 def index():
