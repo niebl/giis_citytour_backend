@@ -50,7 +50,7 @@ COPY sites FROM '/srv/default_data/data-sites.csv' DELIMITER ',' CSV HEADER;
 COPY bibliography FROM '/srv/default_data/data-bibliography.csv' DELIMITER ',' CSV HEADER;
 COPY sources FROM '/srv/default_data/data-sources.csv' DELIMITER ',' CSV HEADER;
 
---CREATE ROLE giis_read LOGIN PASSWORD {password here};
+--CREATE ROLE giis_read LOGIN PASSWORD {'password'};
 --GRANT CONNECT ON DATABASE giis TO giis_read;
 --GRANT USAGE ON SCHEMA public TO giis_read;
 --GRANT SELECT ON stories TO giis_read;
