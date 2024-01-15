@@ -55,5 +55,5 @@ COPY sources FROM '/srv/default_data/data-sources.csv' DELIMITER ',' CSV HEADER;
 --GRANT USAGE ON SCHEMA public TO giis_read;
 --GRANT SELECT ON stories TO giis_read;
 --GRANT SELECT ON sites TO giis_read;
---GRANT SELECT ON bibliograpy TO giis_read;
+--GRANT SELECT ON bibliography TO giis_read;
 --GRANT SELECT ON sources TO giis_read;
