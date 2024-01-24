@@ -24,6 +24,8 @@ CREATE TABLE sites
     long_story text,
     image_url varchar(255),
 
+    radius int,
+
     UNIQUE(site_id)
 );
 
