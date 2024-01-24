@@ -1,5 +1,7 @@
 FROM python
 
+WORKDIR /usr/src/app
+
 ADD index.py .
 ADD classes.py .
 ADD .env .
