@@ -11,7 +11,7 @@ from sqlalchemy.engine import URL
 
 from lorem import get_paragraph
 
-from classes import Story, Site 
+from classes import Story, Site, Sources, Source
 
 load_dotenv()
 
@@ -59,6 +59,18 @@ def get_desc(desc_id):
         return('TODO: return list of all descriptions')
     if desc_id == 'template': #remove later
         return( get_paragraph(count=5, comma=(0, 2), word_range=(4, 8), sentence_range=(5, 10), sep=os.linesep) )
+
+@app.get('/sources', defaults={'site_id': False})
+@app.get('/desc/<site_id>')
+def get_sources(site_id):
+    if not site_id:
+        #return list of all sources without site-references
+        sources = Sources("all")
+        print(sources)
+        return str(sources)
+    else:
+        #return all sources belonging to the select site
+        return
 
 # media resource
 # serves static files
