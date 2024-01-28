@@ -25,6 +25,19 @@ class Story:
             password=os.getenv("DB_PASSWORD")
         )
         db_engine = create_engine(url)
+
+        #all stories
+        if story_id == "all":
+            #sites
+            self.sites = []
+            with db_engine.connect() as connection:
+                db_sites = connection.execute(text(f"SELECT * FROM sites"))
+                sites = [row._asdict() for row in db_sites]
+                for site in sites:
+                    self.sites.append(Site(site))
+                return
+
+        #select story_id
         story = False
         with db_engine.connect() as connection:
             db_story = connection.execute(text(f"SELECT * FROM stories WHERE story_id={story_id}"))    
