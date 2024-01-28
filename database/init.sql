@@ -22,10 +22,10 @@ CREATE TABLE sites
     long_desc text,
     short_story text,
     long_story text,
-    task text,
     image_url varchar(255),
 
     radius int,
+    task text,
 
     UNIQUE(site_id)
 );

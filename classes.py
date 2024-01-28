@@ -87,6 +87,8 @@ class Site:
     image_url: str
     radius: int
 
+    task: str
+
     def __init__(self, attribs):
         self.tour_id = attribs["story"]
         self.site_id = attribs["site_id"]
@@ -100,6 +102,7 @@ class Site:
         self.long_story = attribs["long_story"]
         self.image_url = attribs["image_url"]
         self.radius = attribs["radius"]
+        self.task = attribs["task"]
 
     def __str__(self):
         return json.dumps(self.toGeoJSON())
@@ -122,6 +125,7 @@ class Site:
         out["properties"]["long_story"] = self.long_story
         out["properties"]["image_url"] = self.image_url
         out["properties"]["radius"] = self.radius
+        out["properties"]["task"] = self.task
 
         out["properties"]["site_index"] = self.site_index
         return out
