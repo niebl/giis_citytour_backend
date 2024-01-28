@@ -25,6 +25,19 @@ class Story:
             password=os.getenv("DB_PASSWORD")
         )
         db_engine = create_engine(url)
+
+        #all stories
+        if story_id == "all":
+            #sites
+            self.sites = []
+            with db_engine.connect() as connection:
+                db_sites = connection.execute(text(f"SELECT * FROM sites"))
+                sites = [row._asdict() for row in db_sites]
+                for site in sites:
+                    self.sites.append(Site(site))
+                return
+
+        #select story_id
         story = False
         with db_engine.connect() as connection:
             db_story = connection.execute(text(f"SELECT * FROM stories WHERE story_id={story_id}"))    
@@ -58,7 +71,6 @@ class Story:
         for site in self.sites:
             out["features"].append(site.toGeoJSON())
         return out
-
 
 class Site:
     site_id: int
@@ -122,6 +134,58 @@ class Site:
         pair[0] = float(pair[0])
         pair[1] = float(pair[1])
         return tuple(pair)
+
+class Sources:
+    sources: list
+
+    def __init__(self, site_id):
+        load_dotenv()
+        url = URL.create(
+            drivername="postgresql",
+            username=os.getenv("DB_USER"),
+            host=os.getenv("DB_URL"),
+            port=os.getenv("DB_PORT"),
+            database="giis",
+            password=os.getenv("DB_PASSWORD")
+        )
+        db_engine = create_engine(url)
+
+        #all sources
+        if site_id == "all":
+            self.sources = []
+            with db_engine.connect() as connection:
+                db_sources = connection.execute(text(f"SELECT * FROM bibliography"))
+                sources = [row._asdict() for row in db_sources]
+                for source in sources:
+                    self.sources.append(Source(source))
+                print(len(self.sources))
+                return
+        
+    def __str__(self):
+        out = {}
+        out["sources"] = []
+        for source in self.sources:
+            out["sources"].append(source.toDict())
+        return json.dumps(out)
+
+
+class Source:
+    #might be worth to add an array with places who use that source later on
+    def __init__(self, attribs):
+        self.source_id = attribs["source_id"]
+        self.short_citation = attribs["short_citation"]
+        self.long_citation = attribs["long_citation"]
+
+    def __str__(self):
+        return json.dumps(self.toDict())
+
+    def toDict(self):
+        out = {}
+        out["source_id"] = self.source_id
+        out["short_citation"] = self.short_citation
+        out["long_citation"] = self.long_citation
+
+        return out
 
 
 if __name__ == '__main__':
