@@ -9,9 +9,13 @@ from flask_cors import CORS, cross_origin
 from sqlalchemy import create_engine, text
 from sqlalchemy.engine import URL
 
+<<<<<<< HEAD
 from lorem import get_paragraph
 
 from classes import Story, Site, Sources, Source
+=======
+from classes import Story, Site 
+>>>>>>> 8ea2e3a (remove unuses libraries)
 
 load_dotenv()
 
@@ -52,6 +56,7 @@ def get_story(story_id):
     story = Story(story_id)
     return str(story)
 
+<<<<<<< HEAD
 @app.get("/desc", defaults={'desc_id': False})
 @app.get("/desc/<desc_id>")
 def get_desc(desc_id):
@@ -72,6 +77,8 @@ def get_sources(site_id):
         #return all sources belonging to the select site
         return
 
+=======
+>>>>>>> 8ea2e3a (remove unuses libraries)
 # media resource
 # serves static files
 # media_id is the filename of the file to be served
