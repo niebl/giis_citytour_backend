@@ -1,6 +1,6 @@
 # GIIS city-tour backend
 
-# GIIS city-tour frontend
+# GIIS city-tour backend
 GIIS, Group 3, Universität Münster, Winter-term 2023-2024
 Okemwa, Rump, Niebl
 
